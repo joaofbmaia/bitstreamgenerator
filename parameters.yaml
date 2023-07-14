@@ -1,8 +1,0 @@
-meshRows: 2
-meshColumns: 2
-sequenceTableSize: 2
-controlPatternTableSize: 2
-verticalBroadcastTypeWidth: 32
-interPETypeWidth: 32
-cpgCounterWidth: 8
-sequencerCounterWidth: 32
