@@ -1,0 +1,8 @@
+- 
+  pe_control: GEMM_OS_PROP
+  repeat_for_n_cycles: 16
+  next_index: 1
+- 
+  pe_control: GEMM_OS_COMP
+  repeat_for_n_cycles: 16
+  next_index: 0

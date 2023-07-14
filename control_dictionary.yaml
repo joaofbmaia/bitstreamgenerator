@@ -1,0 +1,42 @@
+GEMM_OS_PROP: 
+  sel_c: REG
+  sel_b: V_BCAST
+  sel_q: V
+  double_buffer_sel: false
+  fu_control: 
+    shift: 0
+    minus_m: false
+    minus_a: false
+    sel_m: BIG_ALU
+    small_alu_sel: ADD
+    big_alu_sel: MUL
+  use_double_buffer: true
+  sel_a: H_BCAST
+GEMM_OS_COMP: 
+  sel_c: REG
+  sel_b: V_BCAST
+  sel_q: V
+  double_buffer_sel: true
+  fu_control: 
+    shift: 0
+    minus_m: false
+    minus_a: false
+    sel_m: BIG_ALU
+    small_alu_sel: ADD
+    big_alu_sel: MUL
+  use_double_buffer: true
+  sel_a: H_BCAST
+GARBAGE: 
+  sel_a: ZERO
+  sel_b: ZERO
+  sel_c: ZERO
+  sel_q: V
+  fu_control: 
+    big_alu_sel: MUL
+    small_alu_sel: ADD
+    minus_a: false
+    minus_m: false
+    sel_m: A
+    shift: 0
+  use_double_buffer: false
+  double_buffer_sel: false
