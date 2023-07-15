@@ -33,6 +33,8 @@ case class ModPEControl(
     val sel_out_v_grid: String,
     val sel_out_h_grid: String,
     val sel_out: String,
+    val reg_p_en: Boolean,
+    val reg_q_en: Boolean,
     val double_buffer_sel: Boolean
 ) derives YamlCodec
 

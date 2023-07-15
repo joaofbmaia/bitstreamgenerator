@@ -9,7 +9,7 @@ Mesh:
           start_after_cycle_number: 1
           pattern_index: 1
         - 
-          start_after_cycle_number: 7
+          start_after_cycle_number: 5
           pattern_index: 0
         - 
           start_after_cycle_number: 0
@@ -20,11 +20,11 @@ Mesh:
           repeat_for_n_cycles: 0
           next_index: 0
         - 
-          pe_control: GEMM_OS_PROP
+          pe_control: GEMM_WS_PROP
           repeat_for_n_cycles: 1
           next_index: 2
         - 
-          pe_control: GEMM_OS_COMP
+          pe_control: GEMM_WS_COMP
           repeat_for_n_cycles: 1
           next_index: 1
         - 
@@ -40,7 +40,7 @@ Mesh:
           start_after_cycle_number: 2
           pattern_index: 1
         - 
-          start_after_cycle_number: 8
+          start_after_cycle_number: 6
           pattern_index: 0
         - 
           start_after_cycle_number: 0
@@ -51,11 +51,11 @@ Mesh:
           repeat_for_n_cycles: 0
           next_index: 0
         - 
-          pe_control: GEMM_OS_PROP
+          pe_control: GEMM_WS_PROP
           repeat_for_n_cycles: 1
           next_index: 2
         - 
-          pe_control: GEMM_OS_COMP
+          pe_control: GEMM_WS_COMP
           repeat_for_n_cycles: 1
           next_index: 1
         - 
@@ -72,7 +72,7 @@ Mesh:
           start_after_cycle_number: 2
           pattern_index: 1
         - 
-          start_after_cycle_number: 8
+          start_after_cycle_number: 6
           pattern_index: 0
         - 
           start_after_cycle_number: 0
@@ -83,11 +83,11 @@ Mesh:
           repeat_for_n_cycles: 0
           next_index: 0
         - 
-          pe_control: GEMM_OS_PROP
+          pe_control: GEMM_WS_PROP
           repeat_for_n_cycles: 1
           next_index: 2
         - 
-          pe_control: GEMM_OS_COMP
+          pe_control: GEMM_WS_COMP
           repeat_for_n_cycles: 1
           next_index: 1
         - 
@@ -103,7 +103,7 @@ Mesh:
           start_after_cycle_number: 3
           pattern_index: 1
         - 
-          start_after_cycle_number: 9
+          start_after_cycle_number: 7
           pattern_index: 0
         - 
           start_after_cycle_number: 0
@@ -114,11 +114,11 @@ Mesh:
           repeat_for_n_cycles: 0
           next_index: 0
         - 
-          pe_control: GEMM_OS_PROP
+          pe_control: GEMM_WS_PROP
           repeat_for_n_cycles: 1
           next_index: 2
         - 
-          pe_control: GEMM_OS_COMP
+          pe_control: GEMM_WS_COMP
           repeat_for_n_cycles: 1
           next_index: 1
         - 

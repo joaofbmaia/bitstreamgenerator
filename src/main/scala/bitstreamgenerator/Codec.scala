@@ -70,7 +70,7 @@ class Codec(
 
   private val FUControlWidth = BigALUSelWidth + SmallALUSelWidth + 2 + MMuxSelWidth + log2Ceil(params.interPETypeWidth)
 
-  private val ModPEControlWidth = PEMuxSelWidth * 4 + FUControlWidth + OutGridMuxSelWidth * 2 + OutMuxSelWidth + 1
+  private val ModPEControlWidth = PEMuxSelWidth * 4 + FUControlWidth + OutGridMuxSelWidth * 2 + OutMuxSelWidth + 3
 
   private val cpgLineWidth = ModPEControlWidth + params.cpgCounterWidth + log2Ceil(params.controlPatternTableSize)
 
@@ -175,6 +175,8 @@ class Codec(
 
   private def ControlEncode(pe: ModPEControl): Seq[Boolean] =
     val double_buffer_sel_bits = Seq(pe.double_buffer_sel)
+    val reg_q_en = Seq(pe.reg_q_en)
+    val reg_p_en = Seq(pe.reg_p_en)
     val sel_out = long2NBools(OutMuxSelDict(pe.sel_out), OutMuxSelWidth)
     val sel_out_h_grid = long2NBools(OutGridMuxSelDict(pe.sel_out_h_grid), OutGridMuxSelWidth)
     val sel_out_v_grid = long2NBools(OutGridMuxSelDict(pe.sel_out_v_grid), OutGridMuxSelWidth)
@@ -185,6 +187,8 @@ class Codec(
     val sel_a_bits = long2NBools(PEMuxSelDict(pe.sel_a), PEMuxSelWidth)
     val control_bits =
       double_buffer_sel_bits ++
+        reg_q_en ++
+        reg_p_en ++
         sel_out ++
         sel_out_h_grid ++
         sel_out_v_grid ++

@@ -104,7 +104,7 @@ import scala.io.Source
   // val writer = new FileWriter(outputFile)
   // val parameters = new Parameters(32, 32, 4, 4, 8, 32)
   // val parametersArray = Seq(parameters, parameters, parameters)
-  // val parametersMap = Map("PROP" -> parameters, "COMP" -> parameters, "GARBAGE" -> parameters)
+  // val parametersMap = Map("PROP" -> parameters, "COMP" -> parameters, "IDLE" -> parameters)
   // val parametersYaml = parametersMap.asYaml
   // writer.write(parametersYaml)
   // writer.close()
