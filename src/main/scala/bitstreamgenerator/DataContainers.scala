@@ -7,7 +7,7 @@ case class Parameters(
     val meshRows: Int,
     val meshColumns: Int,
     val interPETypeWidth: Int,
-    val verticalBroadcastTypeWidth: Int,
+    val verticalGridTypeWidth: Int,
     val sequenceTableSize: Int,
     val controlPatternTableSize: Int,
     val cpgCounterWidth: Int,
@@ -30,7 +30,9 @@ case class ModPEControl(
     val sel_c: String,
     val sel_q: String,
     val fu_control: FUControl,
-    val use_double_buffer: Boolean,
+    val sel_out_v_grid: String,
+    val sel_out_h_grid: String,
+    val sel_out: String,
     val double_buffer_sel: Boolean
 ) derives YamlCodec
 

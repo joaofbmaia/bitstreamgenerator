@@ -85,8 +85,8 @@ import scala.io.Source
   // outMesh.close()
 
 
-  // val cd_test = ModPEControl("H_BCAST", "V_BCAST", "REG", "V", FUControl("MUL", "ADD", false, false, "BIG_ALU", 0), true, false)
-  // val cd_test2 = ModPEControl("H_BCAST", "V_BCAST", "REG", "V", FUControl("MUL", "ADD", false, false, "BIG_ALU", 0), true, true)
+  // val cd_test = ModPEControl("H_GRID", "V_GRID", "REG", "V", FUControl("MUL", "ADD", false, false, "BIG_ALU", 0), true, false)
+  // val cd_test2 = ModPEControl("H_GRID", "V_GRID", "REG", "V", FUControl("MUL", "ADD", false, false, "BIG_ALU", 0), true, true)
   // val cd_test_map = Map("GEMM_OS_PROP" -> cd_test, "GEMM_WS_PROP" -> cd_test2)
 
   // val cpgLine = ControlPatternLine("GEMM_OS_PROP", 16, 1)

@@ -17,9 +17,9 @@ class Codec(
     c_dict: Map[String, ModPEControl]
 ):
   private val PEMuxSelDict = Map(
-    "V_BCAST" -> 0,
+    "V_GRID" -> 0,
     "V" -> 1,
-    "H_BCAST" -> 2,
+    "H_GRID" -> 2,
     "H" -> 3,
     "D" -> 4,
     "REG" -> 5,
@@ -54,9 +54,23 @@ class Codec(
 
   private val MMuxSelWidth = log2Ceil(MMuxSelDict.size)
 
+  private val OutGridMuxSelDict = Map(
+    "FORWARD"-> 0,
+    "FU" -> 1
+  )
+
+  private val OutGridMuxSelWidth = log2Ceil(OutGridMuxSelDict.size)
+
+  private val OutMuxSelDict= Map(
+    "FU"-> 0,
+    "REG" -> 1
+  )
+
+  private val OutMuxSelWidth =  log2Ceil(OutMuxSelDict.size)
+
   private val FUControlWidth = BigALUSelWidth + SmallALUSelWidth + 2 + MMuxSelWidth + log2Ceil(params.interPETypeWidth)
 
-  private val ModPEControlWidth = PEMuxSelWidth * 4 + FUControlWidth + 2
+  private val ModPEControlWidth = PEMuxSelWidth * 4 + FUControlWidth + OutGridMuxSelWidth * 2 + OutMuxSelWidth + 1
 
   private val cpgLineWidth = ModPEControlWidth + params.cpgCounterWidth + log2Ceil(params.controlPatternTableSize)
 
@@ -103,7 +117,7 @@ class Codec(
     val line_bits = pattern_index_bits ++ start_after_cycle_number_bits
     // val line_bytes = line_bits.grouped(8).map(_.foldRight(0)((b,i) => (i<<1) + (if(b) 1 else 0)).toByte).toArray
     val padding_bits_number =
-      params.verticalBroadcastTypeWidth - (line_bits.size % params.verticalBroadcastTypeWidth)
+      params.verticalGridTypeWidth - (line_bits.size % params.verticalGridTypeWidth)
     val line_bytes = bits2byteArray(
       line_bits ++ Seq.fill(padding_bits_number)(false)
     )
@@ -128,7 +142,7 @@ class Codec(
       _.map(
         _.SequencingElement
           .map(SequencingElementLineEncoderWordPadded)
-          .map(_.grouped(params.verticalBroadcastTypeWidth / 8).toSeq)
+          .map(_.grouped(params.verticalGridTypeWidth / 8).toSeq)
       )
     )
     // load order indexes: meshRow, tableLine, lineWord, meshColumn
@@ -161,7 +175,9 @@ class Codec(
 
   private def ControlEncode(pe: ModPEControl): Seq[Boolean] =
     val double_buffer_sel_bits = Seq(pe.double_buffer_sel)
-    val use_double_buffer_bits = Seq(pe.use_double_buffer)
+    val sel_out = long2NBools(OutMuxSelDict(pe.sel_out), OutMuxSelWidth)
+    val sel_out_h_grid = long2NBools(OutGridMuxSelDict(pe.sel_out_h_grid), OutGridMuxSelWidth)
+    val sel_out_v_grid = long2NBools(OutGridMuxSelDict(pe.sel_out_v_grid), OutGridMuxSelWidth)
     val fu_control_bits = FUControlEncode(pe.fu_control)
     val sel_q_bits = long2NBools(PEMuxSelDict(pe.sel_q), PEMuxSelWidth)
     val sel_c_bits = long2NBools(PEMuxSelDict(pe.sel_c), PEMuxSelWidth)
@@ -169,7 +185,9 @@ class Codec(
     val sel_a_bits = long2NBools(PEMuxSelDict(pe.sel_a), PEMuxSelWidth)
     val control_bits =
       double_buffer_sel_bits ++
-        use_double_buffer_bits ++
+        sel_out ++
+        sel_out_h_grid ++
+        sel_out_v_grid ++
         fu_control_bits ++
         sel_q_bits ++
         sel_c_bits ++
@@ -186,7 +204,7 @@ class Codec(
     val line_bits =
       next_index_bits ++ repeat_for_n_cycles_bits ++ pe_control_bits
     val padding_bits_number =
-      params.verticalBroadcastTypeWidth - (line_bits.size % params.verticalBroadcastTypeWidth)
+      params.verticalGridTypeWidth - (line_bits.size % params.verticalGridTypeWidth)
     val line_bytes = bits2byteArray(
       line_bits ++ Seq.fill(padding_bits_number)(false)
     )
@@ -205,7 +223,7 @@ class Codec(
       _.map(
         _.ControlPatternGenerator
           .map(cpgLineEncoder)
-          .map(_.grouped(params.verticalBroadcastTypeWidth / 8).toSeq)
+          .map(_.grouped(params.verticalGridTypeWidth / 8).toSeq)
       )
     )
     // load order indexes: tableLine, lineWord, reverse meshRow , meshColumn
