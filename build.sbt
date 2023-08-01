@@ -10,7 +10,8 @@ lazy val root = project
 
     libraryDependencies ++= Seq(
       "org.scalameta" %% "munit" % "0.7.29" % Test,
-      "org.virtuslab" %% "scala-yaml" % "0.0.7"
+      "org.virtuslab" %% "scala-yaml" % "0.0.7",
+      "org.scalanlp" %% "breeze" % "2.1.0"
     ),
 
     scalacOptions ++= Seq(

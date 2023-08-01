@@ -7,6 +7,7 @@ case class Parameters(
     val meshRows: Int,
     val meshColumns: Int,
     val interPETypeWidth: Int,
+    val horizontalGridTypeWidth: Int,
     val verticalGridTypeWidth: Int,
     val sequenceTableSize: Int,
     val controlPatternTableSize: Int,

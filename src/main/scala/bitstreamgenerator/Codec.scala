@@ -11,11 +11,7 @@ object log2Ceil {
   def apply(in: Int): Int = apply(BigInt(in))
 }
 
-class Codec(
-    params: Parameters,
-    //config: Configuration,
-    c_dict: Map[String, ModPEControl]
-):
+class Codec(params: Parameters, c_dict: Map[String, ModPEControl]):
   private val PEMuxSelDict = Map(
     "V_GRID" -> 0,
     "V" -> 1,

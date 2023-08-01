@@ -2,6 +2,7 @@ meshRows: 2
 meshColumns: 2
 sequenceTableSize: 4
 controlPatternTableSize: 4
+horizontalGridTypeWidth: 8
 verticalGridTypeWidth: 32
 interPETypeWidth: 32
 cpgCounterWidth: 8
