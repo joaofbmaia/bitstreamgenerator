@@ -1,0 +1,9 @@
+meshRows: 3
+meshColumns: 3
+sequenceTableSize: 4
+controlPatternTableSize: 4
+horizontalGridTypeWidth: 8
+verticalGridTypeWidth: 32
+interPETypeWidth: 32
+cpgCounterWidth: 8
+sequencerCounterWidth: 32

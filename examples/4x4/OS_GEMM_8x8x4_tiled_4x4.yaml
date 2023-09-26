@@ -1,0 +1,501 @@
+Mesh: 
+  - 
+    - 
+      SequencingElement: 
+        - 
+          start_after_cycle_number: 0
+          pattern_index: 0
+        - 
+          start_after_cycle_number: 1
+          pattern_index: 1
+        - 
+          start_after_cycle_number: 5
+          pattern_index: 2
+        - 
+          start_after_cycle_number: 25
+          pattern_index: 0
+      ControlPatternGenerator: 
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+        - 
+          pe_control: GEMM_OS_PROP
+          repeat_for_n_cycles: 7
+          next_index: 2
+        - 
+          pe_control: GEMM_OS_COMP
+          repeat_for_n_cycles: 7
+          next_index: 1
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+    - 
+      SequencingElement: 
+        - 
+          start_after_cycle_number: 0
+          pattern_index: 0
+        - 
+          start_after_cycle_number: 2
+          pattern_index: 1
+        - 
+          start_after_cycle_number: 6
+          pattern_index: 2
+        - 
+          start_after_cycle_number: 26
+          pattern_index: 0
+      ControlPatternGenerator: 
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+        - 
+          pe_control: GEMM_OS_PROP
+          repeat_for_n_cycles: 7
+          next_index: 2
+        - 
+          pe_control: GEMM_OS_COMP
+          repeat_for_n_cycles: 7
+          next_index: 1
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+    - 
+      SequencingElement: 
+        - 
+          start_after_cycle_number: 0
+          pattern_index: 0
+        - 
+          start_after_cycle_number: 3
+          pattern_index: 1
+        - 
+          start_after_cycle_number: 7
+          pattern_index: 2
+        - 
+          start_after_cycle_number: 27
+          pattern_index: 0
+      ControlPatternGenerator: 
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+        - 
+          pe_control: GEMM_OS_PROP
+          repeat_for_n_cycles: 7
+          next_index: 2
+        - 
+          pe_control: GEMM_OS_COMP
+          repeat_for_n_cycles: 7
+          next_index: 1
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+    - 
+      SequencingElement: 
+        - 
+          start_after_cycle_number: 0
+          pattern_index: 0
+        - 
+          start_after_cycle_number: 4
+          pattern_index: 1
+        - 
+          start_after_cycle_number: 8
+          pattern_index: 2
+        - 
+          start_after_cycle_number: 28
+          pattern_index: 0
+      ControlPatternGenerator: 
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+        - 
+          pe_control: GEMM_OS_PROP
+          repeat_for_n_cycles: 7
+          next_index: 2
+        - 
+          pe_control: GEMM_OS_COMP
+          repeat_for_n_cycles: 7
+          next_index: 1
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+  - 
+    - 
+      SequencingElement: 
+        - 
+          start_after_cycle_number: 0
+          pattern_index: 0
+        - 
+          start_after_cycle_number: 2
+          pattern_index: 1
+        - 
+          start_after_cycle_number: 6
+          pattern_index: 2
+        - 
+          start_after_cycle_number: 26
+          pattern_index: 0
+      ControlPatternGenerator: 
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+        - 
+          pe_control: GEMM_OS_PROP
+          repeat_for_n_cycles: 7
+          next_index: 2
+        - 
+          pe_control: GEMM_OS_COMP
+          repeat_for_n_cycles: 7
+          next_index: 1
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+    - 
+      SequencingElement: 
+        - 
+          start_after_cycle_number: 0
+          pattern_index: 0
+        - 
+          start_after_cycle_number: 3
+          pattern_index: 1
+        - 
+          start_after_cycle_number: 7
+          pattern_index: 2
+        - 
+          start_after_cycle_number: 27
+          pattern_index: 0
+      ControlPatternGenerator: 
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+        - 
+          pe_control: GEMM_OS_PROP
+          repeat_for_n_cycles: 7
+          next_index: 2
+        - 
+          pe_control: GEMM_OS_COMP
+          repeat_for_n_cycles: 7
+          next_index: 1
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+    - 
+      SequencingElement: 
+        - 
+          start_after_cycle_number: 0
+          pattern_index: 0
+        - 
+          start_after_cycle_number: 4
+          pattern_index: 1
+        - 
+          start_after_cycle_number: 8
+          pattern_index: 2
+        - 
+          start_after_cycle_number: 28
+          pattern_index: 0
+      ControlPatternGenerator: 
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+        - 
+          pe_control: GEMM_OS_PROP
+          repeat_for_n_cycles: 7
+          next_index: 2
+        - 
+          pe_control: GEMM_OS_COMP
+          repeat_for_n_cycles: 7
+          next_index: 1
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+    - 
+      SequencingElement: 
+        - 
+          start_after_cycle_number: 0
+          pattern_index: 0
+        - 
+          start_after_cycle_number: 5
+          pattern_index: 1
+        - 
+          start_after_cycle_number: 9
+          pattern_index: 2
+        - 
+          start_after_cycle_number: 29
+          pattern_index: 0
+      ControlPatternGenerator: 
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+        - 
+          pe_control: GEMM_OS_PROP
+          repeat_for_n_cycles: 7
+          next_index: 2
+        - 
+          pe_control: GEMM_OS_COMP
+          repeat_for_n_cycles: 7
+          next_index: 1
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+  - 
+    - 
+      SequencingElement: 
+        - 
+          start_after_cycle_number: 0
+          pattern_index: 0
+        - 
+          start_after_cycle_number: 3
+          pattern_index: 1
+        - 
+          start_after_cycle_number: 7
+          pattern_index: 2
+        - 
+          start_after_cycle_number: 27
+          pattern_index: 0
+      ControlPatternGenerator: 
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+        - 
+          pe_control: GEMM_OS_PROP
+          repeat_for_n_cycles: 7
+          next_index: 2
+        - 
+          pe_control: GEMM_OS_COMP
+          repeat_for_n_cycles: 7
+          next_index: 1
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+    - 
+      SequencingElement: 
+        - 
+          start_after_cycle_number: 0
+          pattern_index: 0
+        - 
+          start_after_cycle_number: 4
+          pattern_index: 1
+        - 
+          start_after_cycle_number: 8
+          pattern_index: 2
+        - 
+          start_after_cycle_number: 28
+          pattern_index: 0
+      ControlPatternGenerator: 
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+        - 
+          pe_control: GEMM_OS_PROP
+          repeat_for_n_cycles: 7
+          next_index: 2
+        - 
+          pe_control: GEMM_OS_COMP
+          repeat_for_n_cycles: 7
+          next_index: 1
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+    - 
+      SequencingElement: 
+        - 
+          start_after_cycle_number: 0
+          pattern_index: 0
+        - 
+          start_after_cycle_number: 5
+          pattern_index: 1
+        - 
+          start_after_cycle_number: 9
+          pattern_index: 2
+        - 
+          start_after_cycle_number: 29
+          pattern_index: 0
+      ControlPatternGenerator: 
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+        - 
+          pe_control: GEMM_OS_PROP
+          repeat_for_n_cycles: 7
+          next_index: 2
+        - 
+          pe_control: GEMM_OS_COMP
+          repeat_for_n_cycles: 7
+          next_index: 1
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+    - 
+      SequencingElement: 
+        - 
+          start_after_cycle_number: 0
+          pattern_index: 0
+        - 
+          start_after_cycle_number: 6
+          pattern_index: 1
+        - 
+          start_after_cycle_number: 10
+          pattern_index: 2
+        - 
+          start_after_cycle_number: 30
+          pattern_index: 0
+      ControlPatternGenerator: 
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+        - 
+          pe_control: GEMM_OS_PROP
+          repeat_for_n_cycles: 7
+          next_index: 2
+        - 
+          pe_control: GEMM_OS_COMP
+          repeat_for_n_cycles: 7
+          next_index: 1
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+  - 
+    - 
+      SequencingElement: 
+        - 
+          start_after_cycle_number: 0
+          pattern_index: 0
+        - 
+          start_after_cycle_number: 4
+          pattern_index: 1
+        - 
+          start_after_cycle_number: 8
+          pattern_index: 2
+        - 
+          start_after_cycle_number: 28
+          pattern_index: 0
+      ControlPatternGenerator: 
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+        - 
+          pe_control: GEMM_OS_PROP
+          repeat_for_n_cycles: 7
+          next_index: 2
+        - 
+          pe_control: GEMM_OS_COMP
+          repeat_for_n_cycles: 7
+          next_index: 1
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+    - 
+      SequencingElement: 
+        - 
+          start_after_cycle_number: 0
+          pattern_index: 0
+        - 
+          start_after_cycle_number: 5
+          pattern_index: 1
+        - 
+          start_after_cycle_number: 9
+          pattern_index: 2
+        - 
+          start_after_cycle_number: 29
+          pattern_index: 0
+      ControlPatternGenerator: 
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+        - 
+          pe_control: GEMM_OS_PROP
+          repeat_for_n_cycles: 7
+          next_index: 2
+        - 
+          pe_control: GEMM_OS_COMP
+          repeat_for_n_cycles: 7
+          next_index: 1
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+    - 
+      SequencingElement: 
+        - 
+          start_after_cycle_number: 0
+          pattern_index: 0
+        - 
+          start_after_cycle_number: 6
+          pattern_index: 1
+        - 
+          start_after_cycle_number: 10
+          pattern_index: 2
+        - 
+          start_after_cycle_number: 30
+          pattern_index: 0
+      ControlPatternGenerator: 
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+        - 
+          pe_control: GEMM_OS_PROP
+          repeat_for_n_cycles: 7
+          next_index: 2
+        - 
+          pe_control: GEMM_OS_COMP
+          repeat_for_n_cycles: 7
+          next_index: 1
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+    - 
+      SequencingElement: 
+        - 
+          start_after_cycle_number: 0
+          pattern_index: 0
+        - 
+          start_after_cycle_number: 7
+          pattern_index: 1
+        - 
+          start_after_cycle_number: 11
+          pattern_index: 2
+        - 
+          start_after_cycle_number: 31
+          pattern_index: 0
+      ControlPatternGenerator: 
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0
+        - 
+          pe_control: GEMM_OS_PROP
+          repeat_for_n_cycles: 7
+          next_index: 2
+        - 
+          pe_control: GEMM_OS_COMP
+          repeat_for_n_cycles: 7
+          next_index: 1
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 0

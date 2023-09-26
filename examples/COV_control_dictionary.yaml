@@ -1,4 +1,4 @@
-GEMM_OS_PROP: 
+GEMM_OS: 
   sel_a: H_GRID
   sel_b: V_GRID
   sel_c: REG
@@ -16,10 +16,10 @@ GEMM_OS_PROP:
   reg_p_en: true
   reg_q_en: true
   double_buffer_sel: false
-GEMM_OS_COMP: 
+GEMM_OS_ZERO_SWAP: 
   sel_a: H_GRID
   sel_b: V_GRID
-  sel_c: REG
+  sel_c: ZERO
   sel_q: V
   fu_control: 
     big_alu_sel: MUL
@@ -32,42 +32,6 @@ GEMM_OS_COMP:
   sel_out_h_grid: FORWARD
   sel_out: REG
   reg_p_en: true
-  reg_q_en: true
-  double_buffer_sel: true
-GEMM_WS_PROP: 
-  sel_a: H_GRID
-  sel_b: REG
-  sel_c: V_GRID
-  sel_q: V
-  fu_control: 
-    big_alu_sel: MUL
-    small_alu_sel: ADD
-    minus_a: false
-    minus_m: false
-    sel_m: BIG_ALU
-    shift: 0
-  sel_out_v_grid: FU
-  sel_out_h_grid: FORWARD
-  sel_out: REG
-  reg_p_en: false
-  reg_q_en: true
-  double_buffer_sel: false
-GEMM_WS_COMP: 
-  sel_a: H_GRID
-  sel_b: REG
-  sel_c: V_GRID
-  sel_q: V
-  fu_control: 
-    big_alu_sel: MUL
-    small_alu_sel: ADD
-    minus_a: false
-    minus_m: false
-    sel_m: BIG_ALU
-    shift: 0
-  sel_out_v_grid: FU
-  sel_out_h_grid: FORWARD
-  sel_out: REG
-  reg_p_en: false
   reg_q_en: true
   double_buffer_sel: true
 IDLE: 

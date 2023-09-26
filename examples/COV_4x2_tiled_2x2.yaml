@@ -1,0 +1,191 @@
+Mesh: 
+  - 
+    - 
+      SequencingElement: 
+        - 
+          start_after_cycle_number: 0
+          pattern_index: 0
+        - 
+          start_after_cycle_number: 7
+          pattern_index: 5
+        - 
+          start_after_cycle_number: 13
+          pattern_index: 2
+        - 
+          start_after_cycle_number: 0
+          pattern_index: 0
+      ControlPatternGenerator: 
+        - 
+          pe_control: COV_SUM3_ZERO
+          repeat_for_n_cycles: 0
+          next_index: 1
+        - 
+          pe_control: COV_SUM3
+          repeat_for_n_cycles: 0
+          next_index: 3
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 2
+        - 
+          pe_control: COV_NMADD3
+          repeat_for_n_cycles: 3
+          next_index: 2
+        - 
+          pe_control: GEMM_OS
+          repeat_for_n_cycles: 2
+          next_index: 5
+        - 
+          pe_control: GEMM_OS_ZERO_SWAP
+          repeat_for_n_cycles: 0
+          next_index: 4
+        - 
+          pe_control: COV_FORWARD
+          repeat_for_n_cycles: 3
+          next_index: 2
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 7
+    - 
+      SequencingElement: 
+        - 
+          start_after_cycle_number: 0
+          pattern_index: 0
+        - 
+          start_after_cycle_number: 8
+          pattern_index: 5
+        - 
+          start_after_cycle_number: 14
+          pattern_index: 2
+        - 
+          start_after_cycle_number: 0
+          pattern_index: 0
+      ControlPatternGenerator: 
+        - 
+          pe_control: COV_SUM3_ZERO
+          repeat_for_n_cycles: 0
+          next_index: 1
+        - 
+          pe_control: COV_SUM3
+          repeat_for_n_cycles: 0
+          next_index: 3
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 2
+        - 
+          pe_control: COV_NMADD3
+          repeat_for_n_cycles: 3
+          next_index: 2
+        - 
+          pe_control: GEMM_OS
+          repeat_for_n_cycles: 2
+          next_index: 5
+        - 
+          pe_control: GEMM_OS_ZERO_SWAP
+          repeat_for_n_cycles: 0
+          next_index: 4
+        - 
+          pe_control: COV_FORWARD
+          repeat_for_n_cycles: 3
+          next_index: 2
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 7
+  - 
+    - 
+      SequencingElement: 
+        - 
+          start_after_cycle_number: 0
+          pattern_index: 2
+        - 
+          start_after_cycle_number: 3
+          pattern_index: 6
+        - 
+          start_after_cycle_number: 8
+          pattern_index: 5
+        - 
+          start_after_cycle_number: 14
+          pattern_index: 2
+      ControlPatternGenerator: 
+        - 
+          pe_control: COV_SUM3_ZERO
+          repeat_for_n_cycles: 0
+          next_index: 1
+        - 
+          pe_control: COV_SUM3
+          repeat_for_n_cycles: 0
+          next_index: 3
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 2
+        - 
+          pe_control: COV_NMADD3
+          repeat_for_n_cycles: 3
+          next_index: 2
+        - 
+          pe_control: GEMM_OS
+          repeat_for_n_cycles: 2
+          next_index: 5
+        - 
+          pe_control: GEMM_OS_ZERO_SWAP
+          repeat_for_n_cycles: 0
+          next_index: 4
+        - 
+          pe_control: COV_FORWARD
+          repeat_for_n_cycles: 3
+          next_index: 2
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 7
+    - 
+      SequencingElement: 
+        - 
+          start_after_cycle_number: 0
+          pattern_index: 2
+        - 
+          start_after_cycle_number: 3
+          pattern_index: 6
+        - 
+          start_after_cycle_number: 9
+          pattern_index: 5
+        - 
+          start_after_cycle_number: 15
+          pattern_index: 2
+      ControlPatternGenerator: 
+        - 
+          pe_control: COV_SUM3_ZERO
+          repeat_for_n_cycles: 0
+          next_index: 1
+        - 
+          pe_control: COV_SUM3
+          repeat_for_n_cycles: 0
+          next_index: 3
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 2
+        - 
+          pe_control: COV_NMADD3
+          repeat_for_n_cycles: 3
+          next_index: 2
+        - 
+          pe_control: GEMM_OS
+          repeat_for_n_cycles: 2
+          next_index: 5
+        - 
+          pe_control: GEMM_OS_ZERO_SWAP
+          repeat_for_n_cycles: 0
+          next_index: 4
+        - 
+          pe_control: COV_FORWARD
+          repeat_for_n_cycles: 3
+          next_index: 2
+        - 
+          pe_control: IDLE
+          repeat_for_n_cycles: 0
+          next_index: 7
